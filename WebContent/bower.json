@@ -1,0 +1,29 @@
+{
+  "name": "weblixo",
+  "homepage": "https://github.com/umlixodeprojeto/weblixo",
+  "authors": [
+    "Caio de Freitas <caiof.adriano@hotmail.com>"
+  ],
+  "description": "Aplicação que administra uma smart lixeira",
+  "main": "index.html",
+  "keywords": [
+    "lixo"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.7",
+    "angular-route": "^1.6.7",
+    "materialize": "^0.100.2",
+    "angular-messages": "^1.6.7",
+    "angular-base64": "^2.0.5",
+    "angular-cookies": "1.6.5"
+  }
+}

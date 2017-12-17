@@ -1,0 +1,29 @@
+/*
+*	Aqui vão as configurações padrão de CSS do sistema
+*/
+
+/* zerando os defaults do html */
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* alterando a cor dos inputs do materialize */
+.input-field input:focus + label {
+  color: #4caf50 !important;
+}
+.input-field input:focus {
+  border-bottom: 1px solid #4caf50 !important;
+  box-shadow: 0 1px 0 0 #4caf50 !important;
+}
+
+/* alterando a cor dos buttons do materialize */
+.btn, .btn:focus, .btn:active{ 
+  background-color: #4caf50;
+}
+
+.btn:hover{
+  background-color: #66bb6a ; 
+}

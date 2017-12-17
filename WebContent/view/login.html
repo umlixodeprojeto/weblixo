@@ -1,0 +1,56 @@
+<link rel="stylesheet" type="text/css" href="css/login.css">
+<style type="text/css">
+  body{
+    background-color: #81c784;
+    background-image:url("img/vector.svg");
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>
+<div class="container">
+  <div class="row">
+    <!-- <pre>{{user |json}}</pre> -->
+    <div class="col s12 offset-m4 col m4 center-align z-depth-5 login">
+      <div class="row">
+        <div class="col s12 green darken-2 login-header">
+          <h5>Login</h5>
+        </div>
+      </div>
+      <div class="row">
+        <form class="col s12 form-login" name="login" ng-submit="makeLogin(user)" autocomplete="off" novalidate>
+          <div class="input-field">
+            <input
+            ng-class="{'invalid':(login.$submitted || login.name.$dirty) && login.name.$invalid,'valid':login.name.$valid}"
+            type="text"
+            name="name"
+            ng-model="user.username"
+            ng-required="true">
+            <label for="user_name">Usuário</label>
+
+            <div ng-messages="login.name.$error" ng-if="login.$submitted || login.name.$dirty">
+              <span class="red-text" ng-message="required">Informe o nome do usuário</span>
+            </div>
+          </div>
+          <div class="input-field">
+            <input
+            type="password"
+            name="password"
+            ng-class="{'invalid':(login.$submitted || login.password.$dirty) && login.password.$invalid, 'valid':login.password.$valid}"
+            ng-model="user.password"
+            ng-minlength="8"
+            ng-required="true">
+            <label for="user_password">Senha</label>
+
+            <!-- Div com as validações -->
+            <div ng-messages="login.password.$error" ng-if="login.$submitted || login.password.$dirty">
+              <span class="red-text" ng-message="required">Informe a senha</span>
+              <span class="red-text" ng-message="minlength">A senha deve ter mais de 8 caracteres</span>
+            </div>
+          </div>
+          <button class="btn waves-effect waves-dark darken-2" name="btnLoginSubmit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
