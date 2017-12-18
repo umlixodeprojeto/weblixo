@@ -9,7 +9,7 @@ app.factory('AuthAPI',function ($http, $base64, $cookies, $rootScope, $cookieSto
   }
 
   var _validate = function (User) {
-    return $http.post("http://localhost:8080/teste/usuario/login",User);
+    return $http.post("http://localhost:8080/apilixo/usuario/login",User);
   }
 
   var _logout = function () {
